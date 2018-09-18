@@ -12,7 +12,12 @@ Quando('faço o meu cadastro') do
   @cadastro.cadastrar(@dados)
 end
 
-Quando("faço o meu cadastro sem selecionar o sexo") do
+Quando('faço o meu novo cadastro') do
+  @cadastro.cadastrar(@dados)
+  page.refresh
+end
+
+Quando('faço o meu cadastro sem selecionar o sexo') do
   @cadastro.cadastrarSemSexo(@dados)
 end
 

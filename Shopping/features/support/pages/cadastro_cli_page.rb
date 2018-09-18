@@ -35,6 +35,7 @@ class CadastroPage < SitePrism::Page
     check_termo.click
     check_politica.click
     btn_cadastrar.click
+    sleep(3)
   end
 
   def cadastrarSemSexo(dados)
@@ -69,7 +70,6 @@ class CadastroPage < SitePrism::Page
   end
 
   def cadastrarSemPolitica(dados)
-    wait_for_input_cpf
     #dados['nome'] = "#{dados['nome']} #{Faker::Lorem.characters(10)}"
     input_nome.set dados['nome']
     input_cpf.set dados['cpf']
@@ -82,7 +82,7 @@ class CadastroPage < SitePrism::Page
     combo_cidade.find('option', text: dados['cidade']).select_option
     radio_sexo.click
     check_termo.click
-    check_politica.click
+    #check_politica.click
     btn_cadastrar.click
   end
 

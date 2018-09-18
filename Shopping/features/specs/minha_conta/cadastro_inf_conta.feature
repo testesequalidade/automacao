@@ -11,8 +11,8 @@ Contexto: Cadastros em Minha Conta
 @cadastro_tel @auth
 Cenario: Cadastrar telefone
     Quando atualizo meu cadastro com os telefones
-      | Telefone | 3199999999  |
-      | Celular  | 31987548555 |
+      | Telefone |3199999999|
+      | Celular  |11111111111|
     Então minhas informacoes sao gravadas em minha conta
 
 @tel_obrig @auth

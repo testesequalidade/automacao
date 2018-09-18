@@ -12,16 +12,18 @@ Quando('atualizo meu cadastro com os telefones') do |table|
   @conta.inf_conta.cadastroTel(@telefones)
 end
 
-Quando('atualizo meu cadastro sem inserir o telefone celular') do
+Quando('atualizo meu cadastro sem inserir o numero do celular') do
   @conta.inf_conta.input_celular.set '' #insere um valor vazio ao campo se ele estiver preenchido para ter certeza q o campo estará vazio para a validação!
   @conta.inf_conta.btn_salvar.click
 end
   
 Então('minhas informacoes sao gravadas em minha conta') do
-  page.has_css?(@conta.inf_conta.msg_sucess) #verifica se o toast de sucesso aparece na página!
+  #expect(page).to have_content @telefones['Celular']
+  #page.has_css?(@conta.inf_conta.msg_sucess) #verifica se o toast de sucesso aparece na página!
+  page.has_css?('.toast-message')
 end
 
-Então('visualizo a mensagem {string} nos campos de telefone') do |mensagem|
+Então('visualizo a mensagem {string} no campo telefone celular') do |mensagem|
   expect(@conta.inf_conta.msg_erro.text).to eql mensagem
 end
   

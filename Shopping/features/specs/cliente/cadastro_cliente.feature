@@ -13,14 +13,14 @@ Cenário: Cadastro simples
     
     E possuo os seguintes dados:
       | nome              | Luciana Oliveira             |
-      | cpf               | 551.478.056-21               |
+      | cpf               | 823.636.017-26               |
       | email             | isabela.goncalves@csu.com.br |
       | conf_email        | isabela.goncalves@csu.com.br |
       | senha             | 123456                       |
       | estado            | Minas Gerais                 |
       | cidade            | BELO HORIZONTE               |
       | sexo              | FEMININO                     |
-    Quando faço o meu cadastro
+    Quando faço o meu novo cadastro
     Então sou cadastrado com sucesso
 
 @validar_sexo
@@ -28,7 +28,7 @@ Cenário: Validar obrigatoriedade de sexo
 
     E possuo os seguintes dados:
       | nome              | Luciana Oliveira             |
-      | cpf               | 689.513.572-36               |
+      | cpf               | 024.521.519-04               |
       | email             | isabela.goncalves@csu.com.br |
       | conf_email        | isabela.goncalves@csu.com.br |
       | senha             | 123456                       |
@@ -43,7 +43,7 @@ Cenário: Validar obrigatoriedade de aceitacao de termos e condicoes
 
     E possuo os seguintes dados:
       | nome              | Luciana Oliveira             |
-      | cpf               | 689.513.572-36               |
+      | cpf               | 024.521.519-04               |
       | email             | isabela.goncalves@csu.com.br |
       | conf_email        | isabela.goncalves@csu.com.br |
       | senha             | 123456                       |
@@ -59,7 +59,7 @@ Cenário: Validar obrigatoriedade de aceitacao de politicas
 
     E possuo os seguintes dados:
       | nome              | Luciana Oliveira             |
-      | cpf               | 689.513.572-36               |
+      | cpf               | 024.521.519-04               |
       | email             | isabela.goncalves@csu.com.br |
       | conf_email        | isabela.goncalves@csu.com.br |
       | senha             | 123456                       |
@@ -75,7 +75,7 @@ Cenário: Validar obrigatoriedade de selecao de cidade
 
     E possuo os seguintes dados:
       | nome              | Luciana Oliveira             |
-      | cpf               | 689.513.572-36               |
+      | cpf               | 024.521.519-04               |
       | email             | isabela.goncalves@csu.com.br |
       | conf_email        | isabela.goncalves@csu.com.br |
       | senha             | 123456                       |
@@ -103,13 +103,13 @@ Esquema do Cenario: Validacoes em Cadastro
 
     Exemplos:
       | nome      | cpf            | email              | conf_email         | senha | estado       | cidade | sexo     | alerta                                                      |
-      |           | 248.156.565-76 | isabela@csu.com.br | isabela@csu.com.br | 123   | Minas Gerais | BETIM  | FEMININO | É necessário informar o nome                                |
+      |           | 831.104.380-97 | isabela@csu.com.br | isabela@csu.com.br | 123   | Minas Gerais | BETIM  | FEMININO | É necessário informar o nome                                |
       | Ana Carla |                | isabela@csu.com.br | isabela@csu.com.br | 123   | Minas Gerais | BETIM  | FEMININO | O CPF deve ser preenchido.                                  |
-      | Ana Carla | 248.156.565-76 |                    | isabela@csu.com.br | 123   | Minas Gerais | BETIM  | FEMININO | É necessário informar o e-mail                              |
-      | Ana Carla | 248.156.565-76 | isabela@csu.com    | isabela@csu.com.br | 123   | Minas Gerais | BETIM  | FEMININO | A confirmação de e-mail não confere com o e-mail informado. |  
-      | Ana Carla | 248.156.565-76 | isabela@csu.com.br | isabela@csu.com.br |       | Minas Gerais | BETIM  | FEMININO | É necessário informar a senha                               |  
-      | Ana Carla | 248.156.565-76 | isabela@csu.com.br | isabela@csu.com.br | 123   | Selecione    |        | FEMININO | O Estado deve ser preenchido.                               |
-      | Ana Carla | 248.156.565-76 | isabela@csu.com.br | isabela@csu.com.br | 123   | Minas Gerais |        | FEMININO | A Cidade deve ser preenchida.                               |      
+      | Ana Carla | 831.104.380-97 |                    | isabela@csu.com.br | 123   | Minas Gerais | BETIM  | FEMININO | É necessário informar o e-mail                              |
+      | Ana Carla | 831.104.380-97 | isabela@csu.com    | isabela@csu.com.br | 123   | Minas Gerais | BETIM  | FEMININO | A confirmação de e-mail não confere com o e-mail informado. |  
+      | Ana Carla | 831.104.380-97 | isabela@csu.com.br | isabela@csu.com.br |       | Minas Gerais | BETIM  | FEMININO | É necessário informar a senha                               |  
+      | Ana Carla | 831.104.380-97 | isabela@csu.com.br | isabela@csu.com.br | 123   | Selecione    |        | FEMININO | O Estado deve ser preenchido.                               |
+      
 
 
     

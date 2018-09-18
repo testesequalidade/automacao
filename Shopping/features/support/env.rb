@@ -4,6 +4,8 @@ require 'capybara/cucumber'
 require 'site_prism'
 require 'capybara/rspec'
 require 'faker'
+require 'rspec'
+require 'rspec/retry'
 
 
 #variavel de ambiente para servidor externo
@@ -14,7 +16,7 @@ ENV['HTTP_PROXY'] = ENV['http_proxy'] = nil
 
 Capybara.register_driver :selenium do |app|
   client = Selenium::WebDriver::Remote::Http::Default.new
-  client.read_timeout = 300
+  #client.read_timeout = 40
   caps = Selenium::WebDriver::Remote::Capabilities.new(accept_insecure_certs: true)
   Capybara::Selenium::Driver.new(app, :http_client => client,desired_capabilities: caps)
 end
@@ -30,5 +32,7 @@ Capybara.configure do |config|
   config.app_host = CONFIG['url_home']
 end
 #configuração de tempo de espera para achar elemento na tela
-Capybara.default_max_wait_time = 60
+Capybara.default_max_wait_time = 50
 #@wait = Selenium::WebDriver::Wait.new(:timeout => 45)
+
+

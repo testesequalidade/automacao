@@ -8,11 +8,11 @@ Funcionalidade: Login
 @login @logout
 Cenário: Login com sucesso
 
-    Dado qu acessei a pagina de login
+    Dado que acessei a pagina de login
     Quando faço login com "551.478.056-21" e "123456"
     Então sou autenticado com sucesso
 
- @usuario_invalido
+@usuario_invalido
 Esquema do Cenario: Usuario invalido
    
    Dado que acessei a pagina de login

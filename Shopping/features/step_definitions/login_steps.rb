@@ -1,17 +1,16 @@
 
 Dado('que acessei a pagina de login') do
   visit('/Conta/Login')
-  @login.btn_fecha_popup_alternativo.click
-  @login.btn_fecha_popup.click
+  #@login.btn_fecha_popup_alternativo.click
+  #@login.btn_fecha_popup.click
 end
 
 Quando('faço login com {string} e {string}') do |cpf, senha|
- 
   @login.logar(cpf, senha)
 end
 
 Então('sou autenticado com sucesso') do
-  #page.refresh #a pagina demora a carregar, as vezes não aparece o cabeçalho com os dados, por isso o refresh da página
+  page.refresh #a pagina demora a carregar, as vezes não aparece o cabeçalho com os dados, por isso o refresh da página
   #expect(page).to have_content 'LUCIANA'
   #@login.topo.aguardar_informacoes_de_usuario
   #find(:css,'.close').click

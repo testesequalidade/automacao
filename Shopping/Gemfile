@@ -10,3 +10,5 @@ gem 'rubocop'
 gem 'site_prism'
 gem 'faker'
 gem 'byebug'
+gem 'rspec-retry'
+
